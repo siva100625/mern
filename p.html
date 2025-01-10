@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Resume - Siva Subramanian V</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom, #f3f4f6, #e0e0e0);
+            color: #333;
+            line-height: 1.6;
+            overflow-y: scroll;
+            scroll-snap-type: y mandatory;
+        }
+
+        /* Fullscreen Section Styling */
+        section {
+            height: 100vh; /* Full viewport height */
+            scroll-snap-align: start;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Header Section */
+        header {
+            text-align: center;
+            padding: 30px 20px;
+            background: linear-gradient(to right, #4caf50, #3e8e41);
+            color: white;
+            clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+            height: 100vh; /* Full viewport height */
+            scroll-snap-align: start;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        header p {
+            font-size: 1.2em;
+            line-height: 100px;
+        }
+
+        /* Section Titles */
+        section h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #4caf50;
+            position: relative;
+        }
+        section h2::after {
+            content: '';
+            width: 60px;
+            height: 3px;
+            background: #4caf50;
+            display: block;
+            margin: 10px auto;
+        }
+
+        /* About Section */
+        #about p {
+            text-align: center;
+            max-width: 800px;
+            font-size: 1.2em;
+            color: #555;
+        }
+
+        /* Skills Section */
+        #skills ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            list-style: none;
+        }
+        #skills ul li {
+            background: #4caf50;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        #skills ul li:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Projects and Open Source Section */
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+        .card h3 {
+            color: #4caf50;
+            margin-bottom: 10px;
+        }
+        .card p {
+            margin-bottom: 10px;
+            color: #555;
+        }
+        .card a {
+            text-decoration: none;
+            color: #4caf50;
+            font-weight: bold;
+        }
+
+        /* Contact Section */
+        #contact a {
+            color: #4caf50;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #2c3e50;
+            color: white;
+        }
+        header img{
+            border-radius: 25%;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        
+        <img src="download (2).jpeg" alt="">
+        <h2>Siva Subramanian V</h2>
+        <h1>I'm a <span>Passionate Developer</span></h1>
+    </header>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hello! I'm a software developer specializing in web development, data structures, IoT, and open-source contributions. I enjoy creating innovative solutions to solve real-world challenges.</p>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>C Programming</li>
+            <li>Python</li>
+            <li>C++</li>
+            <li>Java</li>
+            <li>Django</li>
+            <li>React Native</li>
+            <li>SQL</li>
+        </ul>
+    </section>
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="card-container">
+            <div class="card">
+                <h3>SHIFT SYNC</h3>
+                <p>A Django-based on-duty form application with Excel automation and email alerts.</p>
+                <a href="https://github.com/siva100625/odformproject" target="_blank">View on GitHub</a>
+            </div>
+            <div class="card">
+                <h3>SAFE GRIP</h3>
+                <p>An IoT-based alcohol detection system integrated with React Native and Django REST.</p>
+                <a href="https://github.com/siva100625/SAFEGRIP-pocketdynamites-" target="_blank">View on GitHub</a>
+            </div>
+        </div>
+    </section>
+
+  
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:sivasubramanian.v2023ece@sece.ac.in">sivasubramanian.v2023ece@sece.ac.in</a></p>
+        <p>GitHub: <a href="https://github.com/siva100625" target="_blank">github.com/siva100625</a></p>
+        <p>LinkedIn: <a href="https://linkedin.com/in/siva-v-4363a8291" target="_blank">linkedin.com/in/siva-v-4363a8291</a></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Siva Subramanian V. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
